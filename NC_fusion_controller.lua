@@ -5,16 +5,11 @@ local computer = require("computer")
 local reactor = component.nc_fusion_reactor
 local term = require("term")
 
-if reactor == nil then
-
-return "reactor is not present"
-
-end
 
 while true do 
-print("rf stored: "..reactor.getEnergyStored())
-print("temp: "..reactor.getTemperature())
-print("efficiency: "..reactor.getEfficiency())
+print("Energy stored in RF: "..reactor.getEnergyStored())
+print("Temperature in K: "..reactor.getTemperature())
+print("Efficiency in %: "..reactor.getEfficiency())
 if reactor.getEfficiency() > 99.8 then
 
 reactor.deactivate()
