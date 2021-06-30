@@ -11,8 +11,8 @@ while true do
 print("Energy stored in RF: "..reactor.getEnergyStored())
 print("Temperature in K: "..reactor.getTemperature())
 print("Efficiency in %: "..reactor.getEfficiency())
-print("Code version: 1.1")
-if reactor.getEfficiency() > 99.89000 then
+print("Code version: 1.2")
+if reactor.getEfficiency() < 99.99000 then
 
 reactor.deactivate()
 
@@ -21,7 +21,7 @@ else
 reactor.activate()
 end
 
-os.sleep(0.5)
+os.sleep(0.2)
 term.clear()
 
 
