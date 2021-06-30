@@ -24,19 +24,9 @@ else
 reactor.activate()
 end
 
-if reactor.getEnergyStored() == 0 then
-
-computer.beep()
-print("reactor failure")
-
-else
-
-print("reactor fine")
-
-end
 os.sleep(0.5)
 term.clear()
 
 
-os.sleep(0.5)
+os.sleep(0.1)
 end
