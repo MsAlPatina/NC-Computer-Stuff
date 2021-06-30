@@ -1,4 +1,5 @@
 -- this is the most basic code ever made, it can even run on a goddamn potato!
+--update: trying to fix the issue were the reactor stays too long turned off
 
 local component = require("component")
 local computer = require("computer")
@@ -11,7 +12,7 @@ print("Energy stored in RF: "..reactor.getEnergyStored())
 print("Temperature in K: "..reactor.getTemperature())
 print("Efficiency in %: "..reactor.getEfficiency())
 print("Code version: 1.0")
-if reactor.getEfficiency() > 99.8 then
+if reactor.getEfficiency() > 99.89000 then
 
 reactor.deactivate()
 
