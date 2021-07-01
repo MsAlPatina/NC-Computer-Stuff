@@ -12,10 +12,20 @@ local w, h = gpu.getResolution()
 
 
 while true do 
+  
+gpu.setForeground(0x000000)
+gpu.setBackground(0x000000)
 print("Energy stored in RF: "..reactor.getEnergyStored())
 print("Temperature in K: "..reactor.getTemperature())
 print("Efficiency in %: "..reactor.getEfficiency())
 print("Code version: 1.2")
+ 
+ gpu.setBackground(0xFFFFFF)
+ gpu.setForeground(0xFFFFFF)
+  
+ gpu.set(1,6,"Efficiency:")
+ gpu.fill(1,7,reactor.getEfficiency()/2,1, "")
+  
 if reactor.getEfficiency() < 99.99000 then
 
 reactor.deactivate()
