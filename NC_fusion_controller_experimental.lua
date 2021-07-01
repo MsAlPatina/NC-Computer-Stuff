@@ -21,9 +21,9 @@ print("Efficiency in %: "..reactor.getEfficiency())
 print("Code version: TEST")
  
  gpu.setForeground(0xFFFFFF)
-  
+ gpu.setBackground(0xFFFFFF)
  gpu.set(1,6,"Efficiency:")
- gpu.fill(1,7,reactor.getEfficiency()/2,1, "")
+ gpu.fill(1,7,reactor.getEfficiency()/2,7, "")
  gpu.set(1,8,"0%")
  gpu.set(1,58,"100")
   
