@@ -26,7 +26,7 @@ print("Code version: TEST")
  gpu.fill(1,7,reactor.getEfficiency()/2,7, "")
  gpu.setBackground(0x000000)
  gpu.set(1,8,"0%")
- gpu.set(1,58,"100")
+ gpu.set(50,8,"100")
   
  gpu.setForeground(0x000000)
 gpu.setBackground(0x000000)
