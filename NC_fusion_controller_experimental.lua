@@ -7,6 +7,8 @@ local component = require("component")
 local computer = require("computer")
 local reactor = component.nc_fusion_reactor
 local term = require("term")
+local gpu = component.gpu
+local w, h = gpu.getResolution()
 
 
 while true do 
