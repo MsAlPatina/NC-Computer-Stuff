@@ -20,7 +20,6 @@ print("Temperature in K: "..reactor.getTemperature())
 print("Efficiency in %: "..reactor.getEfficiency())
 print("Code version: TEST")
  
- gpu.setBackground(0xFFFFFF)
  gpu.setForeground(0xFFFFFF)
   
  gpu.set(1,6,"Efficiency:")
