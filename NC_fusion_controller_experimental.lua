@@ -29,7 +29,7 @@ print("Code version: TEST")
  gpu.set(1,58,"100")
   
   
-if reactor.getEfficiency() < 99.99000 then
+if reactor.getEfficiency() > 99.99000 then
 
 reactor.deactivate()
 
