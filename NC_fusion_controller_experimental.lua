@@ -9,21 +9,22 @@ local reactor = component.nc_fusion_reactor
 local term = require("term")
 local gpu = component.gpu
 local w, h = gpu.getResolution()
-
+local effic = reactor.getEfficiency()
 
 while true do 
+
   
 gpu.setForeground(0x000000)
 gpu.setBackground(0x000000)
 print("Energy stored in RF: "..reactor.getEnergyStored())
 print("Temperature in K: "..reactor.getTemperature())
-print("Efficiency in %: "..reactor.getEfficiency())
+print("Efficiency in %: "..effic)
 print("Code version: TEST")
  
  gpu.setForeground(0xFFFFFF)
  gpu.setBackground(0xFFFFFF)
  gpu.set(1,6,"Efficiency:")
- gpu.fill(1,7,reactor.getEfficiency()/2,7, "")
+ gpu.fill(1,7,effic/2,7, "")
  gpu.setBackground(0x000000)
  gpu.set(1,8,"0%")
  gpu.set(50,8,"100")
