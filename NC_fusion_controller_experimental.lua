@@ -2,6 +2,7 @@
 --BUGS WILL HAPPEN AS ITS UNSTABLE!
 -- this is the most basic code ever made, it can even run on a goddamn potato!
 --update: trying to fix the issue were the reactor stays too long turned off
+--THIS EXPERIMENTAL CODE IS NO LONGER BEING WORKED ON!!
 
 local component = require("component")
 local computer = require("computer")
