@@ -5,18 +5,28 @@ local rla = c.reactor_logic_adapter
 
 local lastEfficiency = 0
 local curEfficiency = 0
-local adjustment = 1
+
 
 print("Hold CTRL+C to exit...")
 os.sleep(3)
 
 while not event.pull(0.1,"interrupted") do
   curEfficiency = rla.getEfficiency()
+	local adjustment = 1
   if curEfficiency > 0 then
 	if lastEfficiency > curEfficiency then
 	  rla.adjustReactivity(adjustment)
+			
+			
+			
 	end
 	
+        if curEfficiency > 80 then
+			
+		rla.adjustReactivity(adjustment - adjustment)	
+		
+	end
+		
 	if  rla.getErrorLevel() > 0 then
 	
 	rla.adjustReactivity(-adjustment)
