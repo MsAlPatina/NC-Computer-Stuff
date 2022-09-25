@@ -19,11 +19,11 @@ while not event.pull(0.1,"interrupted") do
 			
 			
 			
-	end
+	elseif curEfficiency > 80 then
 	
-        if curEfficiency > 80 then
+         rla.adjustReactivity(adjustment - adjustment)	
 			
-		rla.adjustReactivity(adjustment - adjustment)	
+		
 		
 	end
 		
