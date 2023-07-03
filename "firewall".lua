@@ -13,7 +13,7 @@ m1.open(1)
 m2.open(1)
 
 while true do
-local _, receiver, sender, port, _, message,magic = event.pull(1,"modem_message")
+local _, receiver, sender, port, _, message,magic,target = event.pull(1,"modem_message")
 
 print(receiver)
 print(receiver == m1)
@@ -21,7 +21,7 @@ print(receiver == m2)
 print(magic == "to base")
 print(magic == "from base")
 
-if magic == "to base" then
+if magic == "to base" and target == "name of your base" then
 m1.broadcast(1,"hi")
 end
 
